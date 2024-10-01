@@ -1,10 +1,10 @@
-package org.processmining.ebi.plugins;
+package org.processmining.ebi;
 
 import org.processmining.framework.plugin.annotations.Plugin;
 
 @Plugin(name = "Your plug-in name", parameterLabels = { "Name of your first input", "Name of your second input", "Name of your parameters" }, 
 	    returnLabels = { "Name of your output" }, returnTypes = { Object.class }, help = "Call Ebi from ProM")
-public class EbiPlugin {
+public class CallEbi {
 	
 	// This declares that the static `hello` method will be provided
     // a native library.
@@ -13,7 +13,54 @@ public class EbiPlugin {
 	 * copy all .jar files from the Ivy cache to the lib folder of the ProM package
 	 * javac -h . -cp .ebi.jar:lib/* src/org/processmining/ebi/plugins/EbiPlugin.java
 	 */
-    private static native String call_ebi(String input);
+    private static native String call_ebi(String command_name, String output_format, String[] inputs);
+    
+    private static String lpn = "labelled Petri net\n"
+    		+ "# number of places\n"
+    		+ "3\n"
+    		+ "# initial marking\n"
+    		+ "1\n"
+    		+ "0\n"
+    		+ "0\n"
+    		+ "# number of transitions\n"
+    		+ "5\n"
+    		+ "# transition 0\n"
+    		+ "label a\n"
+    		+ "# number of input places\n"
+    		+ "1\n"
+    		+ "0\n"
+    		+ "# number of output places\n"
+    		+ "1\n"
+    		+ "1\n"
+    		+ "# transition 1\n"
+    		+ "label b\n"
+    		+ "# number of input places\n"
+    		+ "1\n"
+    		+ "0\n"
+    		+ "# number of output places\n"
+    		+ "1\n"
+    		+ "2\n"
+    		+ "# transition 2\n"
+    		+ "label a\n"
+    		+ "# number of input places\n"
+    		+ "1\n"
+    		+ "1\n"
+    		+ "# number of output places\n"
+    		+ "0\n"
+    		+ "# transition 3\n"
+    		+ "label b\n"
+    		+ "# number of input places\n"
+    		+ "1\n"
+    		+ "1\n"
+    		+ "# number of output places\n"
+    		+ "0\n"
+    		+ "# transition 4\n"
+    		+ "label a\n"
+    		+ "# number of input places\n"
+    		+ "1\n"
+    		+ "2\n"
+    		+ "# number of output places\n"
+    		+ "0";
 
     static {
         // This actually loads the shared object that we'll be creating.
@@ -24,7 +71,7 @@ public class EbiPlugin {
     
     // The rest is just regular ol' Java!
     public static void main(String[] args) {
-        String output = call_ebi("josh");
+        String output = call_ebi("Ebi discover uniform", ".slpn", new String[] { lpn } );
         System.out.println(output);
     }
 
