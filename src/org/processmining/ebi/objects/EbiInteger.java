@@ -2,7 +2,7 @@ package org.processmining.ebi.objects;
 
 import org.processmining.ebi.EbiObject;
 
-public class EbiInteger implements EbiObject<EbiInteger> {
+public class EbiInteger implements EbiObject {
 
 	@Override
 	public String toEbiString() {
@@ -10,7 +10,7 @@ public class EbiInteger implements EbiObject<EbiInteger> {
 		return null;
 	}
 
-	public EbiInteger fromEbiString(String value) {
+	public static EbiInteger fromEbiString(String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

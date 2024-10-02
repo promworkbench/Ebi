@@ -13,7 +13,7 @@ public class CallEbi {
 	 * copy all .jar files from the Ivy cache to the lib folder of the ProM package
 	 * javac -h . -cp .ebi.jar:lib/* src/org/processmining/ebi/plugins/EbiPlugin.java
 	 */
-    private static native String call_ebi(String command_name, String output_format, String[] inputs);
+    public static native String call_ebi(String command_name, String output_format, String[] inputs);
     
     private static String lpn = "labelled Petri net\n"
     		+ "# number of places\n"

@@ -6,7 +6,7 @@ package org.processmining.ebi;
  *
  * @param <T>
  */
-public interface EbiObject<T extends EbiObject<T>> {
+public interface EbiObject {
 	String toEbiString();
 	
 }

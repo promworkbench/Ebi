@@ -2,7 +2,7 @@ package org.processmining.ebi.objects;
 
 import org.processmining.ebi.EbiObject;
 
-public class EbiStochasticLabelledPetriNet implements EbiObject<EbiStochasticLabelledPetriNet> {
+public class EbiStochasticLabelledPetriNet implements EbiObject {
 
 	@Override
 	public String toEbiString() {
@@ -10,7 +10,7 @@ public class EbiStochasticLabelledPetriNet implements EbiObject<EbiStochasticLab
 		return null;
 	}
 
-	public EbiStochasticLabelledPetriNet fromEbiString(String value) {
+	public static EbiStochasticLabelledPetriNet fromEbiString(String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

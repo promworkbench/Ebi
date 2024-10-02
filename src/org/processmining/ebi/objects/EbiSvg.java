@@ -2,7 +2,7 @@ package org.processmining.ebi.objects;
 
 import org.processmining.ebi.EbiObject;
 
-public class EbiSvg implements EbiObject<EbiSvg> {
+public class EbiSvg implements EbiObject {
 
 	@Override
 	public String toEbiString() {
@@ -10,8 +10,7 @@ public class EbiSvg implements EbiObject<EbiSvg> {
 		return null;
 	}
 
-	@Override
-	public EbiSvg fromEbiString(String value) {
+	public static EbiSvg fromEbiString(String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}
