@@ -1,7 +1,5 @@
 package org.processmining.ebi.objects;
 
-import org.processmining.ebi.EbiObject;
-
 public class EbiString {
 
 	public static String toEbiString(String value) {

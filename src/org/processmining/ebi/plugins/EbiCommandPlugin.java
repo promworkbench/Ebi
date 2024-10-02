@@ -67,13 +67,13 @@ public class EbiCommandPlugin {
 
 // == command Ebi conformance entropic-relevance == 
 
-	public static org.processmining.framework.util.HTMLToString Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv_html(org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_1) {
-		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_1)});
+	public static org.processmining.framework.util.HTMLToString Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv_html(org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) {
+		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_1)});
 		return org.processmining.ebi.objects.EbiLogDiv.fromEbiString(result);
 	}
 
-	public static org.processmining.framework.util.HTMLToString Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv_html(org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) {
-		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_1)});
+	public static org.processmining.framework.util.HTMLToString Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv_html(org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_1) {
+		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_1)});
 		return org.processmining.ebi.objects.EbiLogDiv.fromEbiString(result);
 	}
 
@@ -184,19 +184,14 @@ public class EbiCommandPlugin {
 
 // == command Ebi discover occurrence == 
 
-	public static org.processmining.acceptingpetrinet.models.AcceptingPetriNet Ebi_discover_occurrence__as__labelled_Petri_net__to__AcceptingPetriNet(org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) {
-		String result = CallEbi.call_ebi("Ebi discover occurrence", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_1)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiLabelledPetriNet2AcceptingPetrinet(result);
-	}
-
 	public static org.processmining.acceptingpetrinet.models.AcceptingPetriNet Ebi_discover_occurrence__as__labelled_Petri_net__to__AcceptingPetriNet(org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_1) {
 		String result = CallEbi.call_ebi("Ebi discover occurrence", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_1)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiLabelledPetriNet2AcceptingPetrinet(result);
 	}
 
-	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet Ebi_discover_occurrence__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) {
-		String result = CallEbi.call_ebi("Ebi discover occurrence", ".slpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_1)});
-		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiLabelledPetriNet2LabelledPetriNet(result);
+	public static org.processmining.acceptingpetrinet.models.AcceptingPetriNet Ebi_discover_occurrence__as__labelled_Petri_net__to__AcceptingPetriNet(org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) {
+		String result = CallEbi.call_ebi("Ebi discover occurrence", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_1)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiLabelledPetriNet2AcceptingPetrinet(result);
 	}
 
 	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet Ebi_discover_occurrence__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_1) {
@@ -204,23 +199,23 @@ public class EbiCommandPlugin {
 		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiLabelledPetriNet2LabelledPetriNet(result);
 	}
 
+	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet Ebi_discover_occurrence__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) {
+		String result = CallEbi.call_ebi("Ebi discover occurrence", ".slpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_1)});
+		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiLabelledPetriNet2LabelledPetriNet(result);
+	}
+
 
 
 // == command Ebi discover uniform == 
-
-	public static org.processmining.acceptingpetrinet.models.AcceptingPetriNet Ebi_discover_uniform__as__labelled_Petri_net__to__AcceptingPetriNet(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0) {
-		String result = CallEbi.call_ebi("Ebi discover uniform", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiLabelledPetriNet2AcceptingPetrinet(result);
-	}
 
 	public static org.processmining.acceptingpetrinet.models.AcceptingPetriNet Ebi_discover_uniform__as__labelled_Petri_net__to__AcceptingPetriNet(org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) {
 		String result = CallEbi.call_ebi("Ebi discover uniform", ".lpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_0)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiLabelledPetriNet2AcceptingPetrinet(result);
 	}
 
-	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet Ebi_discover_uniform__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0) {
-		String result = CallEbi.call_ebi("Ebi discover uniform", ".slpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0)});
-		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiLabelledPetriNet2LabelledPetriNet(result);
+	public static org.processmining.acceptingpetrinet.models.AcceptingPetriNet Ebi_discover_uniform__as__labelled_Petri_net__to__AcceptingPetriNet(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0) {
+		String result = CallEbi.call_ebi("Ebi discover uniform", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiLabelledPetriNet2AcceptingPetrinet(result);
 	}
 
 	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet Ebi_discover_uniform__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) {
@@ -228,9 +223,19 @@ public class EbiCommandPlugin {
 		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiLabelledPetriNet2LabelledPetriNet(result);
 	}
 
+	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet Ebi_discover_uniform__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0) {
+		String result = CallEbi.call_ebi("Ebi discover uniform", ".slpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0)});
+		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiLabelledPetriNet2LabelledPetriNet(result);
+	}
+
 
 
 // == command Ebi information == 
+
+	public static String Ebi_information__as__string__to__string_html(org.deckfour.xes.model.XLog input_0) {
+		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
+	}
 
 	public static String Ebi_information__as__string__to__string_html(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0) {
 		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0)});
@@ -239,11 +244,6 @@ public class EbiCommandPlugin {
 
 	public static String Ebi_information__as__string__to__string_html(org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) {
 		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
-	}
-
-	public static String Ebi_information__as__string__to__string_html(org.deckfour.xes.model.XLog input_0) {
-		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
 	}
 
@@ -284,13 +284,13 @@ public class EbiCommandPlugin {
 
 // == command Ebi probability model == 
 
-	public static org.processmining.framework.util.HTMLToString Ebi_probability_model__as__fraction__to__fraction_html(org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) {
-		String result = CallEbi.call_ebi("Ebi probability model", ".frac", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_1)});
+	public static org.processmining.framework.util.HTMLToString Ebi_probability_model__as__fraction__to__fraction_html(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0, org.deckfour.xes.model.XLog input_1) {
+		String result = CallEbi.call_ebi("Ebi probability model", ".frac", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_1)});
 		return org.processmining.ebi.objects.EbiFraction.fromEbiString(result);
 	}
 
-	public static org.processmining.framework.util.HTMLToString Ebi_probability_model__as__fraction__to__fraction_html(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0, org.deckfour.xes.model.XLog input_1) {
-		String result = CallEbi.call_ebi("Ebi probability model", ".frac", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_1)});
+	public static org.processmining.framework.util.HTMLToString Ebi_probability_model__as__fraction__to__fraction_html(org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) {
+		String result = CallEbi.call_ebi("Ebi probability model", ".frac", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_1)});
 		return org.processmining.ebi.objects.EbiFraction.fromEbiString(result);
 	}
 
@@ -334,11 +334,6 @@ public class EbiCommandPlugin {
 
 // == command Ebi visualise text == 
 
-	public static String Ebi_visualise_text__as__string__to__string_html(org.deckfour.xes.model.XLog input_0) {
-		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
-	}
-
 	public static String Ebi_visualise_text__as__string__to__string_html(org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) {
 		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetrinet2EbiLabelledPetriNet(input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
@@ -346,6 +341,11 @@ public class EbiCommandPlugin {
 
 	public static String Ebi_visualise_text__as__string__to__string_html(org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet input_0) {
 		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.LabelledPetriNet2EbiLabelledPetriNet(input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
+	}
+
+	public static String Ebi_visualise_text__as__string__to__string_html(org.deckfour.xes.model.XLog input_0) {
+		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiEventLog(input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(result);
 	}
 

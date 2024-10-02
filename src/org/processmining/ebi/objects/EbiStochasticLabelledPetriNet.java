@@ -1,6 +1,5 @@
 package org.processmining.ebi.objects;
 
-import org.processmining.ebi.EbiObject;
 import org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNet;
 
 public class EbiStochasticLabelledPetriNet {

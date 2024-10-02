@@ -1,7 +1,7 @@
 package org.processmining.ebi.objects;
 
 import org.deckfour.xes.model.XLog;
-import org.processmining.ebi.EbiObject;
+import org.processmining.xeslite.plugin.OpenLogFileLiteImplPlugin;
 
 public class EbiEventLog {
 
@@ -11,8 +11,7 @@ public class EbiEventLog {
 	}
 
 	public static XLog EbiStringToXLog(String value) {
-		// TODO Auto-generated method stub
-		return null;
+		XLog testLog = (XLog) new OpenLogFileLiteImplPlugin();
 	}
 
 }
