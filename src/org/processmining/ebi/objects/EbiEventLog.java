@@ -11,7 +11,7 @@ public class EbiEventLog {
 	}
 
 	public static XLog EbiStringToXLog(String value) {
-		XLog testLog = (XLog) new OpenLogFileLiteImplPlugin();
+		return null;
 	}
 
 }
