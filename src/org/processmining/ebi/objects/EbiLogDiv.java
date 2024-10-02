@@ -1,6 +1,7 @@
 package org.processmining.ebi.objects;
 
 import org.processmining.ebi.EbiObject;
+import org.processmining.framework.util.HTMLToString;
 
 public class EbiLogDiv implements EbiObject {
 
@@ -10,7 +11,7 @@ public class EbiLogDiv implements EbiObject {
 		return null;
 	}
 
-	public static EbiLogDiv fromEbiString(java.lang.String value) {
+	public static HTMLToString fromEbiString(java.lang.String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

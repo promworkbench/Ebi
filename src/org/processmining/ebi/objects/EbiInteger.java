@@ -1,16 +1,15 @@
 package org.processmining.ebi.objects;
 
-import org.processmining.ebi.EbiObject;
+import org.processmining.framework.util.HTMLToString;
 
-public class EbiInteger implements EbiObject {
+public class EbiInteger {
 
-	@Override
-	public String toEbiString() {
+	public static String toEbiString(int value) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public static EbiInteger fromEbiString(String value) {
+	public static HTMLToString fromEbiString(String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

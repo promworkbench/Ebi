@@ -1,16 +1,16 @@
 package org.processmining.ebi.objects;
 
+import org.deckfour.xes.model.XLog;
 import org.processmining.ebi.EbiObject;
 
-public class EbiEventLog implements EbiObject {
+public class EbiEventLog {
 
-	@Override
-	public String toEbiString() {
+	public static String XLogToEbiEventLog(XLog log) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public static EbiEventLog fromEbiString(String value) {
+	public static XLog EbiStringToXLog(String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}

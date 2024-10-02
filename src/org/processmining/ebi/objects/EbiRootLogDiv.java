@@ -1,16 +1,15 @@
 package org.processmining.ebi.objects;
 
-import org.processmining.ebi.EbiObject;
+import org.processmining.framework.util.HTMLToString;
 
-public class EbiRootLogDiv implements EbiObject {
+public class EbiRootLogDiv {
 
-	@Override
-	public String toEbiString() {
+	public static String toEbiString() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	public static EbiRootLogDiv fromEbiString(java.lang.String value) {
+	public static HTMLToString fromEbiString(java.lang.String value) {
 		// TODO Auto-generated method stub
 		return null;
 	}
