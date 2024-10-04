@@ -4,7 +4,7 @@ import org.processmining.framework.plugin.PluginContext;
 
 public class EbiString {
 
-	public static String toEbiString(String value) {
+	public static String toEbiString(PluginContext context, String value) {
 		return value;
 	}
 

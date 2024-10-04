@@ -11,7 +11,6 @@ import org.processmining.contexts.util.HtmlPanel;
 import org.processmining.framework.plugin.PluginContext;
 import org.processmining.framework.plugin.annotations.Plugin;
 import org.processmining.framework.plugin.annotations.PluginVariant;
-import org.processmining.framework.util.HTMLToString;
 import org.processmining.plugins.InductiveMiner.plugins.dialogs.IMMiningDialog;
 
 public class EbiFraction {
@@ -36,7 +35,7 @@ public class EbiFraction {
 			JComponent.class }, parameterLabels = { "fraction" }, userAccessible = true)
 	@Visualizer
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Visualise stochastic trace alignments", requiredParameterLabels = { 0 })
+	@PluginVariant(variantLabel = "Visualise fraction", requiredParameterLabels = { 0 })
 	public JComponent fancy(PluginContext context, BigFraction fraction) {
 		return new HtmlPanel("Approximate value: " + fraction.doubleValue() + "<br>Exact value:<br>" + fraction.getNumerator() + "<br>/<br>" + fraction.getDenominator());
 	}
