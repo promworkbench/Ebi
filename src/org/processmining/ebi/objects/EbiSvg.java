@@ -6,12 +6,14 @@ import java.io.InputStream;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 
+import org.processmining.framework.plugin.PluginContext;
+
 import com.kitfox.svg.SVGDiagram;
 import com.kitfox.svg.SVGUniverse;
 
 public class EbiSvg {
 
-	public static SVGDiagram fromEbiString(String value) {
+	public static SVGDiagram fromEbiString(PluginContext context, String value) {
 		SVGUniverse universe = new SVGUniverse();
 		InputStream stream = new ByteArrayInputStream(value.getBytes(StandardCharsets.UTF_8));
 		URI uri;
