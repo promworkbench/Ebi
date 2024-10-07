@@ -140,60 +140,60 @@ StringBuilder w = new StringBuilder();
 		return result;
 	}
 	
-	public static String PetriNet2EbiString(PluginContext context, Petrinet apn) {
-		StringBuilder w = new StringBuilder();
-		
-		w.append("stochastic labelled Petri net\n");
-		w.append("# number of places\\n");
-		w.append(apn.getPlaces().size() + "\n");
-
-		w.append("# initial marking\\n");
-		TObjectIntMap<Place> placemap = new TObjectIntHashMap<>();
-		{
-			int place = 0;
-			for (Place place_object: apn.getPlaces()) {
-				placemap.put(place_object, place);
-				
-				//initial marking
-				for (int x = 0; x < apn.getInitialMarking().occurrences(place_object); x++) {
-					w.append(place + "\n");
-				}
-				
-				place++;
-			}
-		}
-
-		w.append("# number of transitions\\n");
-		w.append(apn.getTransitions().size() + "\n");
-		int transition = 0;
-		for (Transition transition_object: apn.getTransitions()) {
-			w.append("# transition " + transition + "\n");
-			if (transition_object.isInvisible()) {
-				w.append("silent\n");
-			} else {
-				w.append("label " + StringEscapeUtils.escapeJava(transition_object.getLabel()) + "\n");
-			}
-
-			w.append("# number of input places\n");
-			w.append(apn.getInEdges(transition_object).size() + "\n");
-			for (PetrinetEdge<? extends PetrinetNode, ? extends PetrinetNode> edge : apn.getInEdges(transition_object)) {
-				Place place_object = (Place) edge.getSource();
-				int place = placemap.get(place_object);
-				w.append(place + "\n");
-			}
-
-			w.append("# number of output places\n");
-			w.append(apn.getOutEdges(transition_object).size() + "\n");
-			for (PetrinetEdge<? extends PetrinetNode, ? extends PetrinetNode> edge : apn.getOutEdges(transition_object)) {
-				Place place_object = (Place) edge.getTarget();
-				int place = placemap.get(place_object);
-				w.append(place + "\n");
-			}
-			
-			transition++;
-		}
-		
-		return w.toString();
-	}
+//	public static String PetriNet2EbiString(PluginContext context, Petrinet apn) {
+//		StringBuilder w = new StringBuilder();
+//		
+//		w.append("stochastic labelled Petri net\n");
+//		w.append("# number of places\\n");
+//		w.append(apn.getPlaces().size() + "\n");
+//
+//		w.append("# initial marking\\n");
+//		TObjectIntMap<Place> placemap = new TObjectIntHashMap<>();
+//		{
+//			int place = 0;
+//			for (Place place_object: apn.getPlaces()) {
+//				placemap.put(place_object, place);
+//				
+//				//initial marking
+//				for (int x = 0; x < apn.getInitialMarking().occurrences(place_object); x++) {
+//					w.append(place + "\n");
+//				}
+//				
+//				place++;
+//			}
+//		}
+//
+//		w.append("# number of transitions\\n");
+//		w.append(apn.getTransitions().size() + "\n");
+//		int transition = 0;
+//		for (Transition transition_object: apn.getTransitions()) {
+//			w.append("# transition " + transition + "\n");
+//			if (transition_object.isInvisible()) {
+//				w.append("silent\n");
+//			} else {
+//				w.append("label " + StringEscapeUtils.escapeJava(transition_object.getLabel()) + "\n");
+//			}
+//
+//			w.append("# number of input places\n");
+//			w.append(apn.getInEdges(transition_object).size() + "\n");
+//			for (PetrinetEdge<? extends PetrinetNode, ? extends PetrinetNode> edge : apn.getInEdges(transition_object)) {
+//				Place place_object = (Place) edge.getSource();
+//				int place = placemap.get(place_object);
+//				w.append(place + "\n");
+//			}
+//
+//			w.append("# number of output places\n");
+//			w.append(apn.getOutEdges(transition_object).size() + "\n");
+//			for (PetrinetEdge<? extends PetrinetNode, ? extends PetrinetNode> edge : apn.getOutEdges(transition_object)) {
+//				Place place_object = (Place) edge.getTarget();
+//				int place = placemap.get(place_object);
+//				w.append(place + "\n");
+//			}
+//			
+//			transition++;
+//		}
+//		
+//		return w.toString();
+//	}
 
 }
