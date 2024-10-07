@@ -32,6 +32,7 @@ public class CallEbi {
     	}
     	
     	String result = call_ebi_internal(command_name, output_format, inputs);
+    	System.out.println("== ProM received");
     	System.out.println(result);
     	return result;
     }
