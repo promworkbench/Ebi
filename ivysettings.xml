@@ -14,6 +14,10 @@
             <artifact pattern="https://github.com/promworkbench/Releases/raw/main/Libraries/[module]/[revision]/[artifact]-[revision].[ext]" />
             <artifact pattern="https://github.com/promworkbench/Releases/raw/main/Libraries/[module]/[revision]/[artifact]_[revision].[ext]" />
         </url>
+        <url name="rust" checkmodified="true">
+            <ivy pattern="https://git.rwth-aachen.de/rwth-bpm/rustlibrary/-/raw/main/build/prom-rust/ivy.xml?ref_type=heads&inline=false" />
+            <artifact pattern="https://git.rwth-aachen.de/rwth-bpm/rustlibrary/-/raw/main/build/prom-rust/[artifact].[ext]?ref_type=heads&inline=false" />
+        </url>
         <ibiblio name="maven2" m2compatible="true" root="https://repo1.maven.org/maven2/"/>
         <chain name="default" returnFirst="true">  
             <resolver ref="prom" />  
