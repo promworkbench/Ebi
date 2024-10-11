@@ -15,6 +15,13 @@ public class CallEbi {
 	 */
     static native String call_ebi_internal(String command_name, String output_format, String[] inputs);
     
+    
+    /**
+     * For ProM developers: 
+     * 
+     * - Download a version of Ebi for your Operating System from  
+     */
+    
     static {
         try {
         	System.loadLibrary("ebi");
