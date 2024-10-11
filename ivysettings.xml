@@ -1,6 +1,10 @@
 <ivysettings>
     <settings defaultResolver="default" />   
     <resolvers>
+		<url name="rust" checkmodified="true">
+            <ivy pattern="https://git.rwth-aachen.de/rwth-bpm/rustlibrary/-/raw/main/build/prom-rust/ivy.xml?ref_type=heads&amp;inline=false" />
+            <artifact pattern="https://git.rwth-aachen.de/rwth-bpm/rustlibrary/-/raw/main/build/prom-rust/[artifact].[ext]?ref_type=heads&amp;inline=false" />
+        </url>
         <url name="prom" checkmodified="true">
             <ivy pattern="https://github.com/promworkbench/[module]/raw/main/latestrelease/ivy.xml" />
             <artifact pattern="https://github.com/promworkbench/[module]/raw/main/latestrelease/[artifact].[ext]" />
@@ -14,12 +18,9 @@
             <artifact pattern="https://github.com/promworkbench/Releases/raw/main/Libraries/[module]/[revision]/[artifact]-[revision].[ext]" />
             <artifact pattern="https://github.com/promworkbench/Releases/raw/main/Libraries/[module]/[revision]/[artifact]_[revision].[ext]" />
         </url>
-        <url name="rust" checkmodified="true">
-            <ivy pattern="https://git.rwth-aachen.de/rwth-bpm/rustlibrary/-/raw/main/build/prom-rust/ivy.xml?ref_type=heads&inline=false" />
-            <artifact pattern="https://git.rwth-aachen.de/rwth-bpm/rustlibrary/-/raw/main/build/prom-rust/[artifact].[ext]?ref_type=heads&inline=false" />
-        </url>
         <ibiblio name="maven2" m2compatible="true" root="https://repo1.maven.org/maven2/"/>
         <chain name="default" returnFirst="true">  
+			<resolver ref="rust" />
             <resolver ref="prom" />  
             <resolver ref="prom-svn" />  
             <resolver ref="prom-libs" />  

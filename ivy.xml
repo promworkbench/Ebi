@@ -21,7 +21,7 @@
     	<dependency org="prom" name="GraphViz" rev="latest" changing="true" transitive="true" />
     	<dependency org="prom" name="XESLite" rev="latest" changing="true" transitive="true" />
     	<dependency org="prom" name="Log" rev="latest" changing="true" transitive="true" />
-    	<dependency org="prom" name="Rust" rev="latest" changing="true" transitive="true" />
+    	<dependency org="rust" name="Rust" rev="latest" changing="true" transitive="true" />
     	<!-- Third party libraries. These may span multiple lines. -->
     	<!-- Please uncomment the second line in the resolve target in your build.xml file
     	     if you have any third party libraries. -->
