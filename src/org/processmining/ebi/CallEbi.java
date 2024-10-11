@@ -19,7 +19,8 @@ public class CallEbi {
     /**
      * For ProM developers: 
      * 
-     * - Download a version of Ebi for your Operating System from  
+     * - Download a version of the Ebi lib for your Operating System from http://www.promtools.org/prom6/packages/Rust/.
+     * - Unzip the library in the .zip file to the lib/ folder.
      */
     
     static {

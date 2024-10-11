@@ -175,12 +175,18 @@
 				<arg value="&lt;dependency .*org=&quot;prom&quot; " />
 				<arg value="ivy.xml" />
 			</exec>
+			<exec executable="grep">
+				<redirector output="ivypack2.xml" />
+				<arg value="&lt;dependency .*org=&quot;rust&quot; " />
+				<arg value="ivy.xml" />
+			</exec>
 			<echo file="${release}/packages.xml">
 					&lt;packages&gt;
 						&lt;package name="${project}" version="${version}" os="${os}" url="${project}/${project}-${version}-${os}.zip" desc="${description}" org="${organization}" license="${license}" author="${author}" auto="false" hasPlugins="true" logo="${logo}"&gt;
 				</echo>
 			<concat destfile="${release}/packages.xml" append="true">
 				<filelist files="ivypack.xml" />
+				<filelist files="ivypack2.xml" />
 			</concat>
 			<echo file="${release}/packages.xml" append="true">
 						&lt;/package&gt;
