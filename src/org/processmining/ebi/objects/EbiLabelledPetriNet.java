@@ -29,11 +29,11 @@ public class EbiLabelledPetriNet {
 	public static String AcceptingPetriNet2EbiString(PluginContext context, AcceptingPetriNet apn) throws Exception {
 		StringBuilder w = new StringBuilder();
 
-		w.append("stochastic labelled Petri net\n");
-		w.append("# number of places\\n");
+		w.append("labelled Petri net\n");
+		w.append("# number of places\n");
 		w.append(apn.getNet().getPlaces().size() + "\n");
 
-		w.append("# initial marking\\n");
+		w.append("# initial marking\n");
 		TObjectIntMap<Place> placemap = new TObjectIntHashMap<>();
 		{
 			int place = 0;
@@ -41,15 +41,13 @@ public class EbiLabelledPetriNet {
 				placemap.put(place_object, place);
 
 				// initial marking
-				for (int x = 0; x < apn.getInitialMarking().occurrences(place_object); x++) {
-					w.append(place + "\n");
-				}
+				w.append(apn.getInitialMarking().occurrences(place_object) + "\n");
 
 				place++;
 			}
 		}
 
-		w.append("# number of transitions\\n");
+		w.append("# number of transitions\n");
 		w.append(apn.getNet().getTransitions().size() + "\n");
 		int transition = 0;
 		for (Transition transition_object : apn.getNet().getTransitions()) {
@@ -96,6 +94,7 @@ public class EbiLabelledPetriNet {
 		TIntObjectMap<Place> placemap = new TIntObjectHashMap<>();
 		for (int place = 0; place < numberOfPlaces; place++) {
 			Place place_object = result.addPlace("");
+			placemap.put(place, place_object);
 
 			int inInitialMarking = Integer.parseInt(StochasticLabelledPetriNetImportPlugin.getNextLine(r));
 			if (inInitialMarking > 0) {
@@ -123,6 +122,9 @@ public class EbiLabelledPetriNet {
 				for (int p = 0; p < numberOfIncomingPlaces; p++) {
 					int place = Integer.parseInt(StochasticLabelledPetriNetImportPlugin.getNextLine(r));
 					Place place_object = placemap.get(place);
+					if (place_object == null) {
+						throw new RuntimeException("place " + place + " not found for transition " + transition);
+					}
 					result.addArc(place_object, transition_object);
 				}
 			}

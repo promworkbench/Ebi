@@ -26,7 +26,12 @@ public class EbiFraction {
 		//split in numerator/denominator
 		String[] arr2 = arr[0].split("/");
 		BigInteger num = new BigInteger(arr2[0]);
-		BigInteger den = new BigInteger(arr2[1]);
+		BigInteger den;
+		if (arr2.length > 1) {
+			den = new BigInteger(arr2[1]);
+		} else {
+			den = new BigInteger("1");
+		}
 		
 		return new BigFraction(num, den);
 	}
