@@ -6,6 +6,8 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
+import org.apache.commons.math3.fraction.BigFraction;
+
 public class EbiDialog extends JPanel {
 
 	private static final long serialVersionUID = -6166488057077674334L;
@@ -56,5 +58,9 @@ public class EbiDialog extends JPanel {
 
 	public Integer get_parameter_Integer(int panel_index) {
 		return (Integer) panels.get(panel_index).getValue();
+	}
+
+	public BigFraction get_parameter_org_apache_commons_math3_fraction_BigFraction(int panel_index) {
+		return (BigFraction) panels.get(panel_index).getValue();
 	}
 }
