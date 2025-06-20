@@ -21,7 +21,7 @@ import com.fluxicon.slickerbox.factory.SlickerFactory;
 public class EbiFraction {
 
 	public static String toEbiString(PluginContext context, BigFraction value) {
-		return value.toString();
+		return value.toString().replaceAll(" ", "");
 	}
 
 	public static BigFraction fromEbiString(PluginContext context, String value) {

@@ -37,6 +37,8 @@ public class EbiDialog extends JPanel {
 	public void add_input(EbiDialogPanel panel) {
 
 		JComponent left = panel.create_left();
+		add(left);
+		left.setPreferredSize(left.getMaximumSize());
 		if (panels.isEmpty()) {
 			layout.putConstraint(SpringLayout.NORTH, left, 5, SpringLayout.NORTH, this);
 			layout.putConstraint(SpringLayout.EAST, left, leftColumnWidth, SpringLayout.WEST, this);
@@ -45,10 +47,10 @@ public class EbiDialog extends JPanel {
 					last_left);
 			layout.putConstraint(SpringLayout.EAST, left, leftColumnWidth, SpringLayout.WEST, this);
 		}
-		add(left);
 		last_left = left;
 
 		JComponent right = panel.create_right();
+		right.setPreferredSize(right.getMaximumSize());
 		add(right);
 		layout.putConstraint(SpringLayout.WEST, right, columnMargin, SpringLayout.EAST, left);
 		layout.putConstraint(SpringLayout.VERTICAL_CENTER, right, 0, SpringLayout.VERTICAL_CENTER, left);
