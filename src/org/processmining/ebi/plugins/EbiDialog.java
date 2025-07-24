@@ -61,6 +61,10 @@ public class EbiDialog extends JPanel {
 	public Integer get_parameter_Integer(int panel_index) {
 		return (Integer) panels.get(panel_index).getValue();
 	}
+	
+	public String get_parameter_String(int panel_index) {
+		return (String) panels.get(panel_index).getValue();
+	}
 
 	public BigFraction get_parameter_org_apache_commons_math3_fraction_BigFraction(int panel_index) {
 		return (BigFraction) panels.get(panel_index).getValue();
