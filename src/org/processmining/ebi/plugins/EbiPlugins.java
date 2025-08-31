@@ -101,27 +101,6 @@ public class EbiPlugins {
 
 // == command Ebi analyse-non-stochastic activities == 
 
-	public static String Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic activities", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Shows the activities that are declared in the object. (input: AcceptingPetriNet; output: string)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "string" }, 
-		returnTypes = { String.class },
-		parameterLabels = { "AcceptingPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Shows the activities that are declared in the object. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public String prom_Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		return Ebi_analyse_non_stochastic_activities__as__string__to__string(context, input_0);
-	}
-
 	public static String Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic activities", ".txt", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
@@ -140,27 +119,6 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
 	public String prom_Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		return Ebi_analyse_non_stochastic_activities__as__string__to__string(context, input_0);
-	}
-
-	public static String Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic activities", ".txt", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Shows the activities that are declared in the object. (input: StochasticLabelledPetriNet; output: string)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "string" }, 
-		returnTypes = { String.class },
-		parameterLabels = { "StochasticLabelledPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Shows the activities that are declared in the object. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public String prom_Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_analyse_non_stochastic_activities__as__string__to__string(context, input_0);
 	}
 
@@ -185,28 +143,70 @@ public class EbiPlugins {
 		return Ebi_analyse_non_stochastic_activities__as__string__to__string(context, input_0);
 	}
 
+	public static String Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic activities", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Shows the activities that are declared in the object. (input: AcceptingPetriNet; output: string)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "string" }, 
+		returnTypes = { String.class },
+		parameterLabels = { "AcceptingPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Shows the activities that are declared in the object. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public String prom_Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		return Ebi_analyse_non_stochastic_activities__as__string__to__string(context, input_0);
+	}
+
+	public static String Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic activities", ".txt", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Shows the activities that are declared in the object. (input: StochasticLabelledPetriNet; output: string)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "string" }, 
+		returnTypes = { String.class },
+		parameterLabels = { "StochasticLabelledPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Shows the activities that are declared in the object. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public String prom_Ebi_analyse_non_stochastic_activities__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		return Ebi_analyse_non_stochastic_activities__as__string__to__string(context, input_0);
+	}
+
 
 
 // == command Ebi analyse-non-stochastic any-traces == 
 
-	public static java.lang.Boolean Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic any-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
+	public static java.lang.Boolean Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic any-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
 	}
 
 	@Plugin(
-		name = "Compute whether the model has any traces. (input: XLog; output: boolean)",
+		name = "Compute whether the model has any traces. (input: StochasticLabelledPetriNet; output: boolean)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "boolean" }, 
 		returnTypes = { java.lang.Boolean.class },
-		parameterLabels = { "XLog" },
+		parameterLabels = { "StochasticLabelledPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Compute whether the model has any traces.        Reasons for a model not to have any traces could be if the initial state is part of a livelock, or if there is no initial state.        'true' means that the model has traces, 'false' means that the model has no traces.        The computation may not terminate if the model is unbounded. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(context, input_0);
 	}
 
@@ -231,6 +231,27 @@ public class EbiPlugins {
 		return Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(context, input_0);
 	}
 
+	public static java.lang.Boolean Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic any-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Compute whether the model has any traces. (input: XLog; output: boolean)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "boolean" }, 
+		returnTypes = { java.lang.Boolean.class },
+		parameterLabels = { "XLog" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Compute whether the model has any traces.        Reasons for a model not to have any traces could be if the initial state is part of a livelock, or if there is no initial state.        'true' means that the model has traces, 'false' means that the model has no traces.        The computation may not terminate if the model is unbounded. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+		return Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(context, input_0);
+	}
+
 	public static java.lang.Boolean Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic any-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
@@ -252,49 +273,28 @@ public class EbiPlugins {
 		return Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(context, input_0);
 	}
 
-	public static java.lang.Boolean Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic any-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Compute whether the model has any traces. (input: StochasticLabelledPetriNet; output: boolean)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "boolean" }, 
-		returnTypes = { java.lang.Boolean.class },
-		parameterLabels = { "StochasticLabelledPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Compute whether the model has any traces.        Reasons for a model not to have any traces could be if the initial state is part of a livelock, or if there is no initial state.        'true' means that the model has traces, 'false' means that the model has no traces.        The computation may not terminate if the model is unbounded. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		return Ebi_analyse_non_stochastic_any_traces__as__boolean__to__boolean(context, input_0);
-	}
-
 
 
 // == command Ebi analyse-non-stochastic bounded == 
 
-	public static java.lang.Boolean Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic bounded", ".bool", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
+	public static java.lang.Boolean Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic bounded", ".bool", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
 	}
 
 	@Plugin(
-		name = "Compute whether the model has a bounded state space. (input: XLog; output: boolean)",
+		name = "Compute whether the model has a bounded state space. (input: ProcessTree; output: boolean)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "boolean" }, 
 		returnTypes = { java.lang.Boolean.class },
-		parameterLabels = { "XLog" },
+		parameterLabels = { "ProcessTree" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Compute whether the model has a bounded state space.         For Petri nets, a coverability graph is computed .         For other types of models, `true' is returned. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
 		return Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(context, input_0);
 	}
 
@@ -319,6 +319,27 @@ public class EbiPlugins {
 		return Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(context, input_0);
 	}
 
+	public static java.lang.Boolean Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic bounded", ".bool", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Compute whether the model has a bounded state space. (input: XLog; output: boolean)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "boolean" }, 
+		returnTypes = { java.lang.Boolean.class },
+		parameterLabels = { "XLog" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Compute whether the model has a bounded state space.         For Petri nets, a coverability graph is computed .         For other types of models, `true' is returned. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+		return Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(context, input_0);
+	}
+
 	public static java.lang.Boolean Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic bounded", ".bool", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
@@ -340,27 +361,6 @@ public class EbiPlugins {
 		return Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(context, input_0);
 	}
 
-	public static java.lang.Boolean Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic bounded", ".bool", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Compute whether the model has a bounded state space. (input: ProcessTree; output: boolean)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "boolean" }, 
-		returnTypes = { java.lang.Boolean.class },
-		parameterLabels = { "ProcessTree" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Compute whether the model has a bounded state space.         For Petri nets, a coverability graph is computed .         For other types of models, `true' is returned. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
-		return Ebi_analyse_non_stochastic_bounded__as__boolean__to__boolean(context, input_0);
-	}
-
 
 
 // == command Ebi analyse-non-stochastic cluster == 
@@ -372,27 +372,6 @@ public class EbiPlugins {
 
 
 // == command Ebi analyse-non-stochastic infinitely-many-traces == 
-
-	public static java.lang.Boolean Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic infinitely-many-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Compute whether the model has infinitely many traces. (input: StochasticLabelledPetriNet; output: boolean)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "boolean" }, 
-		returnTypes = { java.lang.Boolean.class },
-		parameterLabels = { "StochasticLabelledPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Compute whether the model has infinitely many traces. The computation may not terminate if the model is unbounded. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		return Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(context, input_0);
-	}
 
 	public static java.lang.Boolean Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic infinitely-many-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
@@ -412,6 +391,27 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
 	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		return Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(context, input_0);
+	}
+
+	public static java.lang.Boolean Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic infinitely-many-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Compute whether the model has infinitely many traces. (input: AcceptingPetriNet; output: boolean)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "boolean" }, 
+		returnTypes = { java.lang.Boolean.class },
+		parameterLabels = { "AcceptingPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Compute whether the model has infinitely many traces. The computation may not terminate if the model is unbounded. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		return Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(context, input_0);
 	}
 
@@ -436,24 +436,24 @@ public class EbiPlugins {
 		return Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(context, input_0);
 	}
 
-	public static java.lang.Boolean Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic infinitely-many-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+	public static java.lang.Boolean Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi analyse-non-stochastic infinitely-many-traces", ".bool", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiBoolean.fromEbiString(context, result);
 	}
 
 	@Plugin(
-		name = "Compute whether the model has infinitely many traces. (input: AcceptingPetriNet; output: boolean)",
+		name = "Compute whether the model has infinitely many traces. (input: StochasticLabelledPetriNet; output: boolean)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "boolean" }, 
 		returnTypes = { java.lang.Boolean.class },
-		parameterLabels = { "AcceptingPetriNet" },
+		parameterLabels = { "StochasticLabelledPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Compute whether the model has infinitely many traces. The computation may not terminate if the model is unbounded. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+	public java.lang.Boolean prom_Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_analyse_non_stochastic_infinitely_many_traces__as__boolean__to__boolean(context, input_0);
 	}
 
@@ -624,27 +624,6 @@ public class EbiPlugins {
 
 // == command Ebi conformance entropic-relevance == 
 
-	public static org.processmining.ebi.objects.EbiLogDiv Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
-		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1)});
-		return org.processmining.ebi.objects.EbiLogDiv.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Compute entropic relevance (uniform). (input: XLog, XLog; output: logdiv)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "logdiv" }, 
-		returnTypes = { org.processmining.ebi.objects.EbiLogDiv.class },
-		parameterLabels = { "XLog", "XLog" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Compute entropic relevance (uniform). (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.processmining.ebi.objects.EbiLogDiv prom_Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
-		return Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(context, input_0, input_1);
-	}
-
 	public static org.processmining.ebi.objects.EbiLogDiv Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1) throws Exception {
 		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_1)});
 		return org.processmining.ebi.objects.EbiLogDiv.fromEbiString(context, result);
@@ -663,6 +642,27 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
 	public org.processmining.ebi.objects.EbiLogDiv prom_Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1) throws Exception {
+		return Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(context, input_0, input_1);
+	}
+
+	public static org.processmining.ebi.objects.EbiLogDiv Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
+		String result = CallEbi.call_ebi("Ebi conformance entropic-relevance", ".logdiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1)});
+		return org.processmining.ebi.objects.EbiLogDiv.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Compute entropic relevance (uniform). (input: XLog, XLog; output: logdiv)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "logdiv" }, 
+		returnTypes = { org.processmining.ebi.objects.EbiLogDiv.class },
+		parameterLabels = { "XLog", "XLog" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Compute entropic relevance (uniform). (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
+	public org.processmining.ebi.objects.EbiLogDiv prom_Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
 		return Ebi_conformance_entropic_relevance__as__logdiv__to__logdiv(context, input_0, input_1);
 	}
 
@@ -716,36 +716,6 @@ public class EbiPlugins {
 
 // == command Ebi conformance jensen-shannon-sample == 
 
-	public static org.processmining.framework.util.HTMLToString Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.deckfour.xes.model.XLog input_1, Integer input_2) throws Exception {
-		String result = CallEbi.call_ebi("Ebi conformance jensen-shannon-sample", ".rldiv", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1), org.processmining.ebi.objects.EbiInteger.toEbiString(context, input_2)});
-		return org.processmining.ebi.objects.EbiRootLogDiv.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Compute Jensen-Shannon stochastic conformance with sampling. (input: StochasticLabelledPetriNet, XLog; output: rootlogdiv)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "rootlogdiv" }, 
-		returnTypes = { org.processmining.framework.util.HTMLToString.class },
-		parameterLabels = { "StochasticLabelledPetriNet", "XLog" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Compute Jensen-Shannon stochastic conformance with sampling. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.processmining.framework.util.HTMLToString prom_Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(UIPluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
-		EbiDialog dialog = new EbiDialog();
-		dialog.add_input(org.processmining.ebi.objects.EbiInteger.create_input_panel("Number of traces to sample."));
-		InteractionResult result = context.showWizard("Compute Jensen-Shannon stochastic conformance with sampling.", true, true, dialog);
-
-		if (result != InteractionResult.FINISHED) {
-			context.getFutureResult(0).cancel(false);
-			return null;
-}
-		Integer input_2 = dialog.get_parameter_Integer(0);
-		return Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(context, input_0, input_1, input_2);
-	}
-
 	public static org.processmining.framework.util.HTMLToString Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1, Integer input_2) throws Exception {
 		String result = CallEbi.call_ebi("Ebi conformance jensen-shannon-sample", ".rldiv", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0), org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_1), org.processmining.ebi.objects.EbiInteger.toEbiString(context, input_2)});
 		return org.processmining.ebi.objects.EbiRootLogDiv.fromEbiString(context, result);
@@ -776,24 +746,24 @@ public class EbiPlugins {
 		return Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(context, input_0, input_1, input_2);
 	}
 
-	public static org.processmining.framework.util.HTMLToString Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1, Integer input_2) throws Exception {
-		String result = CallEbi.call_ebi("Ebi conformance jensen-shannon-sample", ".rldiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1), org.processmining.ebi.objects.EbiInteger.toEbiString(context, input_2)});
+	public static org.processmining.framework.util.HTMLToString Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.deckfour.xes.model.XLog input_1, Integer input_2) throws Exception {
+		String result = CallEbi.call_ebi("Ebi conformance jensen-shannon-sample", ".rldiv", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1), org.processmining.ebi.objects.EbiInteger.toEbiString(context, input_2)});
 		return org.processmining.ebi.objects.EbiRootLogDiv.fromEbiString(context, result);
 	}
 
 	@Plugin(
-		name = "Compute Jensen-Shannon stochastic conformance with sampling. (input: XLog, XLog; output: rootlogdiv)",
+		name = "Compute Jensen-Shannon stochastic conformance with sampling. (input: StochasticLabelledPetriNet, XLog; output: rootlogdiv)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "rootlogdiv" }, 
 		returnTypes = { org.processmining.framework.util.HTMLToString.class },
-		parameterLabels = { "XLog", "XLog" },
+		parameterLabels = { "StochasticLabelledPetriNet", "XLog" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Compute Jensen-Shannon stochastic conformance with sampling. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.processmining.framework.util.HTMLToString prom_Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(UIPluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
+	public org.processmining.framework.util.HTMLToString prom_Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(UIPluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
 		EbiDialog dialog = new EbiDialog();
 		dialog.add_input(org.processmining.ebi.objects.EbiInteger.create_input_panel("Number of traces to sample."));
 		InteractionResult result = context.showWizard("Compute Jensen-Shannon stochastic conformance with sampling.", true, true, dialog);
@@ -824,6 +794,36 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
 	public org.processmining.framework.util.HTMLToString prom_Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(UIPluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1) throws Exception {
+		EbiDialog dialog = new EbiDialog();
+		dialog.add_input(org.processmining.ebi.objects.EbiInteger.create_input_panel("Number of traces to sample."));
+		InteractionResult result = context.showWizard("Compute Jensen-Shannon stochastic conformance with sampling.", true, true, dialog);
+
+		if (result != InteractionResult.FINISHED) {
+			context.getFutureResult(0).cancel(false);
+			return null;
+}
+		Integer input_2 = dialog.get_parameter_Integer(0);
+		return Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(context, input_0, input_1, input_2);
+	}
+
+	public static org.processmining.framework.util.HTMLToString Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1, Integer input_2) throws Exception {
+		String result = CallEbi.call_ebi("Ebi conformance jensen-shannon-sample", ".rldiv", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1), org.processmining.ebi.objects.EbiInteger.toEbiString(context, input_2)});
+		return org.processmining.ebi.objects.EbiRootLogDiv.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Compute Jensen-Shannon stochastic conformance with sampling. (input: XLog, XLog; output: rootlogdiv)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "rootlogdiv" }, 
+		returnTypes = { org.processmining.framework.util.HTMLToString.class },
+		parameterLabels = { "XLog", "XLog" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Compute Jensen-Shannon stochastic conformance with sampling. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
+	public org.processmining.framework.util.HTMLToString prom_Ebi_conformance_jensen_shannon_sample__as__rootlogdiv__to__rootlogdiv(UIPluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
 		EbiDialog dialog = new EbiDialog();
 		dialog.add_input(org.processmining.ebi.objects.EbiInteger.create_input_panel("Number of traces to sample."));
 		InteractionResult result = context.showWizard("Compute Jensen-Shannon stochastic conformance with sampling.", true, true, dialog);
@@ -906,27 +906,6 @@ public class EbiPlugins {
 
 // == command Ebi convert labelled-petri-net == 
 
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi convert labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
-	}
-
-	@Plugin(
-		name = "Convert an object to a labelled Petri net. (input: AcceptingPetriNet; output: PetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "PetriNet" }, 
-		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "AcceptingPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Convert an object to a labelled Petri net. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		return Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0);
-	}
-
 	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi convert labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
@@ -966,6 +945,27 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
 	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		return Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0);
+	}
+
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi convert labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
+	}
+
+	@Plugin(
+		name = "Convert an object to a labelled Petri net. (input: AcceptingPetriNet; output: PetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "PetriNet" }, 
+		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
+		parameterLabels = { "AcceptingPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Convert an object to a labelled Petri net. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		return Ebi_convert_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
@@ -1019,27 +1019,6 @@ public class EbiPlugins {
 		return Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
 	}
 
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover alignments", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_1)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
-	}
-
-	@Plugin(
-		name = "Give each transition a weight that matches the aligned occurrences of its label. (input: XLog, AcceptingPetriNet; output: PetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "PetriNet" }, 
-		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "XLog", "AcceptingPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Give each transition a weight that matches the aligned occurrences of its label. The model must be livelock-free. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) throws Exception {
-		return Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
-	}
-
 	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
 		String result = CallEbi.call_ebi("Ebi discover alignments", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_1)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
@@ -1058,6 +1037,27 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
 	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
+		return Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
+	}
+
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover alignments", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_1)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
+	}
+
+	@Plugin(
+		name = "Give each transition a weight that matches the aligned occurrences of its label. (input: XLog, AcceptingPetriNet; output: PetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "PetriNet" }, 
+		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
+		parameterLabels = { "XLog", "AcceptingPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Give each transition a weight that matches the aligned occurrences of its label. The model must be livelock-free. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) throws Exception {
 		return Ebi_discover_alignments__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
 	}
 
@@ -1192,27 +1192,6 @@ public class EbiPlugins {
 
 // == command Ebi discover occurrence labelled-petri-net == 
 
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover occurrence labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_1)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
-	}
-
-	@Plugin(
-		name = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (input: XLog, ProcessTree; output: PetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "PetriNet" }, 
-		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "XLog", "ProcessTree" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
-		return Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
-	}
-
 	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1) throws Exception {
 		String result = CallEbi.call_ebi("Ebi discover occurrence labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_1)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
@@ -1231,6 +1210,27 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
 	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1) throws Exception {
+		return Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
+	}
+
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover occurrence labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_1)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
+	}
+
+	@Plugin(
+		name = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (input: XLog, ProcessTree; output: PetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "PetriNet" }, 
+		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
+		parameterLabels = { "XLog", "ProcessTree" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
 		return Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
 	}
 
@@ -1253,27 +1253,6 @@ public class EbiPlugins {
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
 	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_1) throws Exception {
 		return Ebi_discover_occurrence_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0, input_1);
-	}
-
-	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover occurrence labelled-petri-net", ".slpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_1)});
-		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiString2StochasticLabelledPetriNet(context, result);
-	}
-
-	@Plugin(
-		name = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (input: XLog, ProcessTree; output: StochasticLabelledPetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "StochasticLabelledPetriNet" }, 
-		returnTypes = { org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights.class },
-		parameterLabels = { "XLog", "ProcessTree" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights prom_Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
-		return Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(context, input_0, input_1);
 	}
 
 	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_1) throws Exception {
@@ -1318,6 +1297,27 @@ public class EbiPlugins {
 		return Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(context, input_0, input_1);
 	}
 
+	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover occurrence labelled-petri-net", ".slpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_1)});
+		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiString2StochasticLabelledPetriNet(context, result);
+	}
+
+	@Plugin(
+		name = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (input: XLog, ProcessTree; output: StochasticLabelledPetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "StochasticLabelledPetriNet" }, 
+		returnTypes = { org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights.class },
+		parameterLabels = { "XLog", "ProcessTree" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Give each transition a weight that matches the occurrences of its label; silent transitions get a weight of 1. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
+	public org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights prom_Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_1) throws Exception {
+		return Ebi_discover_occurrence_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(context, input_0, input_1);
+	}
+
 
 
 // == command Ebi discover occurrence process-tree == 
@@ -1325,6 +1325,27 @@ public class EbiPlugins {
 
 
 // == command Ebi discover uniform labelled-petri-net == 
+
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
+	}
+
+	@Plugin(
+		name = "Give each transition a weight of 1 in a labelled Petri net. (input: AcceptingPetriNet; output: PetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "PetriNet" }, 
+		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
+		parameterLabels = { "AcceptingPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Give each transition a weight of 1 in a labelled Petri net. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		return Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0);
+	}
 
 	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
@@ -1368,45 +1389,24 @@ public class EbiPlugins {
 		return Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".lpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
-	}
-
-	@Plugin(
-		name = "Give each transition a weight of 1 in a labelled Petri net. (input: AcceptingPetriNet; output: PetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "PetriNet" }, 
-		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "AcceptingPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Give each transition a weight of 1 in a labelled Petri net. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		return Ebi_discover_uniform_labelled_petri_net__as__labelled_Petri_net__to__PetriNet(context, input_0);
-	}
-
-	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".slpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".slpn", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiString2StochasticLabelledPetriNet(context, result);
 	}
 
 	@Plugin(
-		name = "Give each transition a weight of 1 in a labelled Petri net. (input: AcceptingPetriNet; output: StochasticLabelledPetriNet)",
+		name = "Give each transition a weight of 1 in a labelled Petri net. (input: ProcessTree; output: StochasticLabelledPetriNet)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "StochasticLabelledPetriNet" }, 
 		returnTypes = { org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights.class },
-		parameterLabels = { "AcceptingPetriNet" },
+		parameterLabels = { "ProcessTree" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Give each transition a weight of 1 in a labelled Petri net. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights prom_Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+	public org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights prom_Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
 		return Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(context, input_0);
 	}
 
@@ -1431,24 +1431,24 @@ public class EbiPlugins {
 		return Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(context, input_0);
 	}
 
-	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".slpn", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
+	public static org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover uniform labelled-petri-net", ".slpn", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.EbiString2StochasticLabelledPetriNet(context, result);
 	}
 
 	@Plugin(
-		name = "Give each transition a weight of 1 in a labelled Petri net. (input: ProcessTree; output: StochasticLabelledPetriNet)",
+		name = "Give each transition a weight of 1 in a labelled Petri net. (input: AcceptingPetriNet; output: StochasticLabelledPetriNet)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "StochasticLabelledPetriNet" }, 
 		returnTypes = { org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights.class },
-		parameterLabels = { "ProcessTree" },
+		parameterLabels = { "AcceptingPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Give each transition a weight of 1 in a labelled Petri net. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights prom_Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+	public org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights prom_Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		return Ebi_discover_uniform_labelled_petri_net__as__stochastic_labelled_Petri_net__to__StochasticLabelledPetriNet(context, input_0);
 	}
 
@@ -1459,27 +1459,6 @@ public class EbiPlugins {
 
 
 // == command Ebi discover-non-stochastic flower deterministic-finite-automaton == 
-
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower deterministic-finite-automaton", ".lpn", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
-	}
-
-	@Plugin(
-		name = "Discover a DFA that supports any trace with the activities of the log. (input: ProcessTree; output: PetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "PetriNet" }, 
-		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "ProcessTree" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Discover a DFA that supports any trace with the activities of the log. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
-		return Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(context, input_0);
-	}
 
 	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower deterministic-finite-automaton", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
@@ -1499,27 +1478,6 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
 	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		return Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(context, input_0);
-	}
-
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower deterministic-finite-automaton", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
-	}
-
-	@Plugin(
-		name = "Discover a DFA that supports any trace with the activities of the log. (input: StochasticLabelledPetriNet; output: PetriNet)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "PetriNet" }, 
-		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "StochasticLabelledPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Discover a DFA that supports any trace with the activities of the log. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
@@ -1544,28 +1502,70 @@ public class EbiPlugins {
 		return Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
-
-
-// == command Ebi discover-non-stochastic flower process-tree == 
-
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower deterministic-finite-automaton", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
 	}
 
 	@Plugin(
-		name = "Discover a process tree that supports any trace with the activities of the log. (input: StochasticLabelledPetriNet; output: PetriNet)",
+		name = "Discover a DFA that supports any trace with the activities of the log. (input: StochasticLabelledPetriNet; output: PetriNet)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "PetriNet" }, 
 		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
 		parameterLabels = { "StochasticLabelledPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Discover a DFA that supports any trace with the activities of the log. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		return Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(context, input_0);
+	}
+
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower deterministic-finite-automaton", ".lpn", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
+	}
+
+	@Plugin(
+		name = "Discover a DFA that supports any trace with the activities of the log. (input: ProcessTree; output: PetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "PetriNet" }, 
+		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
+		parameterLabels = { "ProcessTree" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Discover a DFA that supports any trace with the activities of the log. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		return Ebi_discover_non_stochastic_flower_deterministic_finite_automaton__as__labelled_Petri_net__to__PetriNet(context, input_0);
+	}
+
+
+
+// == command Ebi discover-non-stochastic flower process-tree == 
+
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
+	}
+
+	@Plugin(
+		name = "Discover a process tree that supports any trace with the activities of the log. (input: XLog; output: PetriNet)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "PetriNet" }, 
+		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
+		parameterLabels = { "XLog" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Discover a process tree that supports any trace with the activities of the log. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
@@ -1590,24 +1590,24 @@ public class EbiPlugins {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
-	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".lpn", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
+	public static org.processmining.models.graphbased.directed.petrinet.Petrinet Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".lpn", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiLabelledPetriNet.EbiString2Petrinet(context, result);
 	}
 
 	@Plugin(
-		name = "Discover a process tree that supports any trace with the activities of the log. (input: XLog; output: PetriNet)",
+		name = "Discover a process tree that supports any trace with the activities of the log. (input: StochasticLabelledPetriNet; output: PetriNet)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "PetriNet" }, 
 		returnTypes = { org.processmining.models.graphbased.directed.petrinet.Petrinet.class },
-		parameterLabels = { "XLog" },
+		parameterLabels = { "StochasticLabelledPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Discover a process tree that supports any trace with the activities of the log. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
+	public org.processmining.models.graphbased.directed.petrinet.Petrinet prom_Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
@@ -1632,24 +1632,24 @@ public class EbiPlugins {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__labelled_Petri_net__to__PetriNet(context, input_0);
 	}
 
-	public static org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".ptree", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
+	public static org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".ptree", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiProcessTree.EbiString2EfficientTree(context, result);
 	}
 
 	@Plugin(
-		name = "Discover a process tree that supports any trace with the activities of the log. (input: StochasticLabelledPetriNet; output: ProcessTree)",
+		name = "Discover a process tree that supports any trace with the activities of the log. (input: AcceptingPetriNet; output: ProcessTree)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "ProcessTree" }, 
 		returnTypes = { org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree.class },
-		parameterLabels = { "StochasticLabelledPetriNet" },
+		parameterLabels = { "AcceptingPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Discover a process tree that supports any trace with the activities of the log. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree prom_Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+	public org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree prom_Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(context, input_0);
 	}
 
@@ -1695,24 +1695,24 @@ public class EbiPlugins {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(context, input_0);
 	}
 
-	public static org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".ptree", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+	public static org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi discover-non-stochastic flower process-tree", ".ptree", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiProcessTree.EbiString2EfficientTree(context, result);
 	}
 
 	@Plugin(
-		name = "Discover a process tree that supports any trace with the activities of the log. (input: AcceptingPetriNet; output: ProcessTree)",
+		name = "Discover a process tree that supports any trace with the activities of the log. (input: StochasticLabelledPetriNet; output: ProcessTree)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "ProcessTree" }, 
 		returnTypes = { org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree.class },
-		parameterLabels = { "AcceptingPetriNet" },
+		parameterLabels = { "StochasticLabelledPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Discover a process tree that supports any trace with the activities of the log. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree prom_Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+	public org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree prom_Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_discover_non_stochastic_flower_process_tree__as__process_tree__to__ProcessTree(context, input_0);
 	}
 
@@ -1791,6 +1791,48 @@ public class EbiPlugins {
 
 // == command Ebi information == 
 
+	public static String Ebi_information__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Show information about a file. (input: StochasticLabelledPetriNet; output: string)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "string" }, 
+		returnTypes = { String.class },
+		parameterLabels = { "StochasticLabelledPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Show information about a file. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public String prom_Ebi_information__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
+		return Ebi_information__as__string__to__string(context, input_0);
+	}
+
+	public static String Ebi_information__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Show information about a file. (input: AcceptingPetriNet; output: string)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "string" }, 
+		returnTypes = { String.class },
+		parameterLabels = { "AcceptingPetriNet" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Show information about a file. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public String prom_Ebi_information__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		return Ebi_information__as__string__to__string(context, input_0);
+	}
+
 	public static String Ebi_information__as__string__to__string(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
@@ -1830,48 +1872,6 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
 	public String prom_Ebi_information__as__string__to__string(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		return Ebi_information__as__string__to__string(context, input_0);
-	}
-
-	public static String Ebi_information__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Show information about a file. (input: AcceptingPetriNet; output: string)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "string" }, 
-		returnTypes = { String.class },
-		parameterLabels = { "AcceptingPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Show information about a file. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public String prom_Ebi_information__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		return Ebi_information__as__string__to__string(context, input_0);
-	}
-
-	public static String Ebi_information__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi information", ".txt", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Show information about a file. (input: StochasticLabelledPetriNet; output: string)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "string" }, 
-		returnTypes = { String.class },
-		parameterLabels = { "StochasticLabelledPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Show information about a file. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public String prom_Ebi_information__as__string__to__string(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0) throws Exception {
 		return Ebi_information__as__string__to__string(context, input_0);
 	}
 
@@ -1989,27 +1989,6 @@ public class EbiPlugins {
 
 // == command Ebi probability log == 
 
-	public static org.apache.commons.math3.fraction.BigFraction Ebi_probability_log__as__fraction__to__fraction(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
-		String result = CallEbi.call_ebi("Ebi probability log", ".frac", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1)});
-		return org.processmining.ebi.objects.EbiFraction.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Compute the probability that a stochastic model produces any trace of a log. (input: XLog, XLog; output: fraction)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "fraction" }, 
-		returnTypes = { org.apache.commons.math3.fraction.BigFraction.class },
-		parameterLabels = { "XLog", "XLog" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Compute the probability that a stochastic model produces any trace of a log. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
-	public org.apache.commons.math3.fraction.BigFraction prom_Ebi_probability_log__as__fraction__to__fraction(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
-		return Ebi_probability_log__as__fraction__to__fraction(context, input_0, input_1);
-	}
-
 	public static org.apache.commons.math3.fraction.BigFraction Ebi_probability_log__as__fraction__to__fraction(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
 		String result = CallEbi.call_ebi("Ebi probability log", ".frac", new String[] {org.processmining.ebi.objects.EbiStochasticLabelledPetriNet.StochasticLabelledPetriNet2EbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1)});
 		return org.processmining.ebi.objects.EbiFraction.fromEbiString(context, result);
@@ -2028,6 +2007,27 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
 	public org.apache.commons.math3.fraction.BigFraction prom_Ebi_probability_log__as__fraction__to__fraction(PluginContext context, org.processmining.stochasticlabelledpetrinets.StochasticLabelledPetriNetSimpleWeights input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
+		return Ebi_probability_log__as__fraction__to__fraction(context, input_0, input_1);
+	}
+
+	public static org.apache.commons.math3.fraction.BigFraction Ebi_probability_log__as__fraction__to__fraction(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
+		String result = CallEbi.call_ebi("Ebi probability log", ".frac", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0), org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_1)});
+		return org.processmining.ebi.objects.EbiFraction.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Compute the probability that a stochastic model produces any trace of a log. (input: XLog, XLog; output: fraction)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "fraction" }, 
+		returnTypes = { org.apache.commons.math3.fraction.BigFraction.class },
+		parameterLabels = { "XLog", "XLog" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Compute the probability that a stochastic model produces any trace of a log. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0, 1 })
+	public org.apache.commons.math3.fraction.BigFraction prom_Ebi_probability_log__as__fraction__to__fraction(PluginContext context, org.deckfour.xes.model.XLog input_0, org.deckfour.xes.model.XLog input_1) throws Exception {
 		return Ebi_probability_log__as__fraction__to__fraction(context, input_0, input_1);
 	}
 
@@ -2167,6 +2167,27 @@ public class EbiPlugins {
 
 // == command Ebi visualise text == 
 
+	public static String Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
+		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
+	}
+
+	@Plugin(
+		name = "Visualise a file as text. (input: ProcessTree; output: string)",
+		level = PluginLevel.PeerReviewed, 
+		returnLabels = { "string" }, 
+		returnTypes = { String.class },
+		parameterLabels = { "ProcessTree" },
+		userAccessible = true,
+		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
+		help = "Visualise a file as text. (calls Ebi)"
+	)
+	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
+	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
+	public String prom_Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+		return Ebi_visualise_text__as__string__to__string(context, input_0);
+	}
+
 	public static String Ebi_visualise_text__as__string__to__string(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
 		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiEventLog.XLogToEbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
@@ -2185,27 +2206,6 @@ public class EbiPlugins {
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
 	public String prom_Ebi_visualise_text__as__string__to__string(PluginContext context, org.deckfour.xes.model.XLog input_0) throws Exception {
-		return Ebi_visualise_text__as__string__to__string(context, input_0);
-	}
-
-	public static String Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
-		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
-	}
-
-	@Plugin(
-		name = "Visualise a file as text. (input: AcceptingPetriNet; output: string)",
-		level = PluginLevel.PeerReviewed, 
-		returnLabels = { "string" }, 
-		returnTypes = { String.class },
-		parameterLabels = { "AcceptingPetriNet" },
-		userAccessible = true,
-		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
-		help = "Visualise a file as text. (calls Ebi)"
-	)
-	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
-	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public String prom_Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		return Ebi_visualise_text__as__string__to__string(context, input_0);
 	}
 
@@ -2230,24 +2230,24 @@ public class EbiPlugins {
 		return Ebi_visualise_text__as__string__to__string(context, input_0);
 	}
 
-	public static String Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
-		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiProcessTree.EfficientTree2EbiString(context, input_0)});
+	public static String Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
+		String result = CallEbi.call_ebi("Ebi visualise text", ".txt", new String[] {org.processmining.ebi.objects.EbiLabelledPetriNet.AcceptingPetriNet2EbiString(context, input_0)});
 		return org.processmining.ebi.objects.EbiString.fromEbiString(context, result);
 	}
 
 	@Plugin(
-		name = "Visualise a file as text. (input: ProcessTree; output: string)",
+		name = "Visualise a file as text. (input: AcceptingPetriNet; output: string)",
 		level = PluginLevel.PeerReviewed, 
 		returnLabels = { "string" }, 
 		returnTypes = { String.class },
-		parameterLabels = { "ProcessTree" },
+		parameterLabels = { "AcceptingPetriNet" },
 		userAccessible = true,
 		categories = { PluginCategory.Discovery, PluginCategory.Analytics, PluginCategory.ConformanceChecking },
 		help = "Visualise a file as text. (calls Ebi)"
 	)
 	@UITopiaVariant(affiliation = IMMiningDialog.affiliation, author = IMMiningDialog.author, email = IMMiningDialog.email)
 	@PluginVariant(variantLabel = "Call Ebi", requiredParameterLabels = { 0 })
-	public String prom_Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.plugins.InductiveMiner.efficienttree.EfficientTree input_0) throws Exception {
+	public String prom_Ebi_visualise_text__as__string__to__string(PluginContext context, org.processmining.acceptingpetrinet.models.AcceptingPetriNet input_0) throws Exception {
 		return Ebi_visualise_text__as__string__to__string(context, input_0);
 	}
 
