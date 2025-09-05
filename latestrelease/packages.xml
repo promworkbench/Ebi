@@ -1,6 +1,6 @@
 
 					<packages>
-						<package name="Ebi" version="6.15.137" os="all" url="Ebi/Ebi-6.15.137-all.zip" desc="Ebi" org="RWTH Aachen" license="GPL" author="Sander Leemans" auto="false" hasPlugins="true" logo="prom_subtitle_hat_300.png">
+						<package name="Ebi" version="6.15.138" os="all" url="Ebi/Ebi-6.15.138-all.zip" desc="Ebi" org="RWTH Aachen" license="GPL" author="Sander Leemans" auto="false" hasPlugins="true" logo="prom_subtitle_hat_300.png">
 				    	<dependency org="prom" name="ProM-Plugins" rev="latest" changing="true" transitive="true" />
     	<dependency org="prom" name="BasicUtils" rev="latest" changing="true" transitive="true" />
     	<dependency org="prom" name="Widgets" rev="latest" changing="true" transitive="true" />
