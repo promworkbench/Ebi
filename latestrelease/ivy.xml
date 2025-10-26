@@ -1,7 +1,7 @@
 <ivy-module version="2.0">
     <info organisation="prom" module="Ebi" revision="latest">
     	<description>
-    		Version 6.15.152
+    		Version 6.16.153
     	</description>
     </info>
     <configurations>
